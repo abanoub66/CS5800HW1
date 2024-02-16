@@ -12,6 +12,22 @@ public class CommissionEmployee extends Employee {
         this.grossSalary = grossSalary;
     }
 
+    public double getCommissionRate() {
+        return commissionRate;
+    }
+
+    public void setCommissionRate(double commissionRate) {
+        this.commissionRate = commissionRate;
+    }
+
+    public int getGrossSalary() {
+        return grossSalary;
+    }
+
+    public void setGrossSalary(int grossSalary) {
+        this.grossSalary = grossSalary;
+    }
+
     @Override
     public void print() {
         super.print();
