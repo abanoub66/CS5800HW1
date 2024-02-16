@@ -17,5 +17,13 @@ public class EmployeeDriver {
                 95000);
         Employee mahanzVaziri = new CommissionEmployee("Mahanz", "Vaziri", "777-77-7777",
                 .22, 40000);
+
+        joeJones.print();
+        stephanieSmith.print();
+        maryQuinn.print();
+        nicoleDior.print();
+        renwaChanel.print();
+        mikeDavenport.print();
+        mahanzVaziri.print();
     }
 }
