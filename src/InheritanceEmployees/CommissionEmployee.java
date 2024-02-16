@@ -11,4 +11,10 @@ public class CommissionEmployee extends Employee {
         this.commissionRate = commissionRate;
         this.grossSalary = grossSalary;
     }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(commissionRate + " " + grossSalary);
+    }
 }

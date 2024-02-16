@@ -27,4 +27,10 @@ public class HourlyEmployee extends Employee {
     public void setNumberHoursWorked(int numberHoursWorked) {
         this.numberHoursWorked = numberHoursWorked;
     }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(wage + " " + numberHoursWorked);
+    }
 }

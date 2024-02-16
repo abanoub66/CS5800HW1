@@ -16,4 +16,10 @@ public class BaseEmployee extends Employee {
     public void setBaseSalary(int baseSalary) {
         this.baseSalary = baseSalary;
     }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println(baseSalary);
+    }
 }

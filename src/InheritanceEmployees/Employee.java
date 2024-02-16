@@ -35,4 +35,8 @@ public abstract class Employee {
     public void setSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
     }
+
+    public void print() {
+        System.out.print(firstName + " " + lastName + " " + socialSecurityNumber + " ");
+    }
 }
