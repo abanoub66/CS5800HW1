@@ -18,12 +18,12 @@ public class EmployeeDriver {
         Employee mahanzVaziri = new CommissionEmployee("Mahanz", "Vaziri", "777-77-7777",
                 .22, 40000);
 
-        joeJones.print();
-        stephanieSmith.print();
-        maryQuinn.print();
-        nicoleDior.print();
-        renwaChanel.print();
-        mikeDavenport.print();
-        mahanzVaziri.print();
+        System.out.println(joeJones);
+        System.out.println(stephanieSmith);
+        System.out.println(maryQuinn);
+        System.out.println(nicoleDior);
+        System.out.println(renwaChanel);
+        System.out.println(mikeDavenport);
+        System.out.println(mahanzVaziri);
     }
 }

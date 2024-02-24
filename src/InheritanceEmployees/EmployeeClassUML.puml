@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Employee {
+firstName
+lastName
+socialSecurityNumber
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getSocialSecurityNumber()
+setSocialSecurityNumber()
+toString() : Override Object
+}
+class BaseEmployee {
+baseSalary
+getBaseSalary()
+setBaseSalary()
+toString() : Override Employee
+}
+class CommissionEmployee {
+commissionRate
+grossSalary
+getCommissionRate()
+setCommissionRate()
+getGrossSalary()
+setGrossSalary()
+toString() : Override Employee
+}
+class HourlyEmployee {
+wage
+numberHoursWorked
+getWage()
+setWage()
+getNumberHoursWorked()
+setNumberHoursWorked()
+toString() : Override Employee
+}
+class SalariedEmployee {
+weeklySalary
+getWeeklySalary()
+setWeeklySalary()
+toString() : Override Employee
+}
+
+BaseEmployee --|> Employee
+CommissionEmployee --|> Employee
+HourlyEmployee --|> Employee
+SalariedEmployee --|> Employee
+
+
+@enduml

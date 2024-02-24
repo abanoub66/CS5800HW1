@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "<u>fee:Ship</u>" as s0 {
+name = "fee"
+yearBuilt = "1976"
+}
+object "<u>fie:CruiseShip</u>" as s1 {
+name = "fie"
+yearBuilt = "1980"
+maxPassengers = 200000
+}
+object "<u>foe:CargoShip</u>" as s2 {
+name = "foe"
+yearBuilt = "1984"
+cargoCapacityInTons = 25
+}
+
+@enduml

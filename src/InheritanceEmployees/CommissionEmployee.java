@@ -29,8 +29,7 @@ public class CommissionEmployee extends Employee {
     }
 
     @Override
-    public void print() {
-        super.print();
-        System.out.println(commissionRate + " " + grossSalary);
+    public String toString() {
+        return super.toString() + commissionRate + " " + grossSalary;
     }
 }

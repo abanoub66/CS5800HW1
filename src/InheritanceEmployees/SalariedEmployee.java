@@ -18,8 +18,7 @@ public class SalariedEmployee extends Employee {
     }
 
     @Override
-    public void print() {
-        super.print();
-        System.out.println(weeklySalary);
+    public String toString() {
+        return super.toString() + weeklySalary;
     }
 }

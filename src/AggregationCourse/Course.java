@@ -24,25 +24,18 @@ public class Course {
         this(name, new Instructor[]{instructor}, textbooks);
     }
 
-    public void print() {
-        System.out.println(name + ", " +
-                instructorsFirstAndLastNames() +  ", " +
-                textbooksTitlesAndAuthors());
+    @Override
+    public String toString() {
+        return name + ", " +
+                arrayToString(instructors) +  ", " +
+                arrayToString(textbooks);
     }
 
-    private String instructorsFirstAndLastNames() {
-        StringBuilder firstAndLastNames = new StringBuilder();
-        for (Instructor i : instructors) {
-            firstAndLastNames.append(i.getFirstName()).append(" ").append(i.getLastName()).append(" ");
+    private String arrayToString(Object[] array) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Object o : array) {
+            stringBuilder.append(o.toString()).append(" ");
         }
-        return firstAndLastNames.toString().stripTrailing();
-    }
-
-    private String textbooksTitlesAndAuthors() {
-        StringBuilder titlesAndAuthors = new StringBuilder();
-        for (Textbook i : textbooks) {
-            titlesAndAuthors.append(i.getTitle()).append(" ").append(i.getAuthor()).append(" ");
-        }
-        return titlesAndAuthors.toString().stripTrailing();
+        return stringBuilder.toString().stripTrailing();
     }
 }

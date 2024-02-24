@@ -18,7 +18,7 @@ public class CargoShip extends Ship {
     }
 
     @Override
-    public void print() {
-        System.out.println(getName() + " " + cargoCapacityInTons);
+    public String toString() {
+        return name + " " +cargoCapacityInTons;
     }
 }

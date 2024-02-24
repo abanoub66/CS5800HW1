@@ -1,0 +1,8 @@
+@startuml
+class Course
+class Instructor
+class Textbook
+
+Course *-- Instructor
+Course *-- Textbook
+@enduml

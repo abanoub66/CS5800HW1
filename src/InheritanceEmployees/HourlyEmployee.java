@@ -29,8 +29,7 @@ public class HourlyEmployee extends Employee {
     }
 
     @Override
-    public void print() {
-        super.print();
-        System.out.println(wage + " " + numberHoursWorked);
+    public String toString() {
+        return super.toString() + wage + " " + numberHoursWorked;
     }
 }

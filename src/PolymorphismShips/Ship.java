@@ -2,8 +2,8 @@ package PolymorphismShips;
 
 public class Ship {
 
-    private String name;
-    private String yearBuilt;
+    protected String name;
+    protected String yearBuilt;
 
     public Ship(String name, String yearBuilt) {
         this.name = name;
@@ -26,7 +26,8 @@ public class Ship {
         this.yearBuilt = yearBuilt;
     }
 
-    public void print() {
-        System.out.println(name + " " + yearBuilt);
+    @Override
+    public String toString() {
+        return name + " " + yearBuilt;
     }
 }

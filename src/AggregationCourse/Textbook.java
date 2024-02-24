@@ -36,5 +36,8 @@ public class Textbook {
         this.publisher = publisher;
     }
 
-
+    @Override
+    public String toString() {
+        return title + " " + author;
+    }
 }

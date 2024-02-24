@@ -17,7 +17,7 @@ public class ShipDriver {
 
     private static void displayShips(Ship[] ships) {
         for (Ship ship : ships) {
-            ship.print();
+            System.out.println(ship);
         }
     }
 }

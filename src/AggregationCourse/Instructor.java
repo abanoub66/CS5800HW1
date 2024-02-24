@@ -35,4 +35,9 @@ public class Instructor {
     public void setOfficeNumber(String officeNumber) {
         this.officeNumber = officeNumber;
     }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
 }

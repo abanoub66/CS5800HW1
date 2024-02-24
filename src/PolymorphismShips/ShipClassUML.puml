@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Ship {
+name
+yearBuilt
+getName()
+setName()
+getYearBuilt()
+setYearBuilt()
+toString() : Override Object
+}
+class CargoShip{
+cargoCapacityInTons
+getCargoCapacityInTons()
+setCargoCapacityInTons()
+toString() : Override Ship
+}
+class CruiseShip{
+maxPassengers
+getMaxPassengers()
+setMaxPassengers()
+toString() Override : Ship
+}
+
+CargoShip --|> Ship
+CruiseShip --|> Ship
+@enduml

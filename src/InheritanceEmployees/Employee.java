@@ -36,7 +36,8 @@ public abstract class Employee {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
-    public void print() {
-        System.out.print(firstName + " " + lastName + " " + socialSecurityNumber + " ");
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " " + socialSecurityNumber + " ";
     }
 }

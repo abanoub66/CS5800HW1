@@ -4,35 +4,34 @@ public class FileSystemDriver {
 
     public static void main(String[] args) {
         Folder phpDemo1 = new Folder("php_demo1");
-        Folder sourceFiles = new Folder("Source Files");
-        phpDemo1.addSubFolder(sourceFiles);
-        phpDemo1.addSubFolder("Include Path");
-        phpDemo1.addSubFolder("Remote Files");
-        sourceFiles.addSubFolder("  .phalcon");
-        Folder app = new Folder("app");
-        sourceFiles.addSubFolder(app);
-        sourceFiles.addSubFolder("cache");
-        Folder p = new Folder("public");
-        sourceFiles.addSubFolder(p);
-        sourceFiles.addFile(".htaccess");
-        sourceFiles.addFile(".htrouter.php");
-        sourceFiles.addFile("index.html");
-        app.addSubFolder("config");
-        app.addSubFolder("controllers");
-        app.addSubFolder("library");
-        app.addSubFolder("migrations");
-        app.addSubFolder("models");
-        app.addSubFolder("views");
-        phpDemo1.print();
+        phpDemo1.setFolder("Source Files");
+        phpDemo1.setFolder("Include Path");
+        phpDemo1.setFolder("Remote Files");
+        Folder sourceFiles = phpDemo1.getFolder("Source Files");
+        sourceFiles.setFolder("  .phalcon");
+        sourceFiles.setFolder("app");
+        sourceFiles.setFolder("cache");
+        sourceFiles.setFolder("public");
+        sourceFiles.setFile(".htaccess");
+        sourceFiles.setFile(".htrouter.php");
+        sourceFiles.setFile("index.html");
+        Folder app = sourceFiles.getFolder("app");
+        app.setFolder("config");
+        app.setFolder("controllers");
+        app.setFolder("library");
+        app.setFolder("migrations");
+        app.setFolder("models");
+        app.setFolder("views");
+        System.out.println(phpDemo1);
 
         System.out.println();
         System.out.println();
-        app.delete();
-        phpDemo1.print();
+        phpDemo1.delete("app");
+        System.out.println(phpDemo1);
 
         System.out.println();
         System.out.println();
-        p.delete();
-        phpDemo1.print();
+        phpDemo1.delete("public");
+        System.out.println(phpDemo1);
     }
 }
