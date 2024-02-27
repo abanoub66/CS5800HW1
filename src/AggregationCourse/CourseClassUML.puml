@@ -1,7 +1,40 @@
 @startuml
-class Course
-class Instructor
-class Textbook
+class Course {
+name
+instructors
+textbooks
+getName()
+setName()
+getInstructors()
+setInstructors()
+getTextbooks()
+setTextbooks()
+toString() : Override Object
+}
+class Instructor {
+firstName
+lastName
+officeNumber
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getOfficeNumber()
+setOfficeNumber()
+toString() : Override Object
+}
+class Textbook {
+title
+author
+publisher
+getTitle()
+setTitle()
+getAuthor()
+setAuthor()
+getPublisher()
+setPublisher()
+toString() : Override Object
+}
 
 Course o-- Instructor
 Course o-- Textbook

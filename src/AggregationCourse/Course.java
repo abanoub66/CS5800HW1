@@ -2,9 +2,9 @@ package AggregationCourse;
 
 public class Course {
 
-    private final String name;
-    private final Instructor[] instructors;
-    private final Textbook[] textbooks;
+    private String name;
+    private Instructor[] instructors;
+    private Textbook[] textbooks;
 
     public Course(String name, Instructor[] instructors, Textbook[] textbooks) {
         this.name = name;
@@ -22,6 +22,30 @@ public class Course {
 
     public Course(String name, Instructor instructor, Textbook[] textbooks) {
         this(name, new Instructor[]{instructor}, textbooks);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Instructor[] getInstructors() {
+        return instructors;
+    }
+
+    public void setInstructors(Instructor[] instructors) {
+        this.instructors = instructors;
+    }
+
+    public Textbook[] getTextbooks() {
+        return textbooks;
+    }
+
+    public void setTextbooks(Textbook[] textbooks) {
+        this.textbooks = textbooks;
     }
 
     @Override
